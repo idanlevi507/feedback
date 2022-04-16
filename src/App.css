@@ -52,3 +52,16 @@
 .show {
   display:block
 }
+
+.msg-modal {
+  position: fixed;
+  right: 100px;
+  bottom: 50px;
+  width: 150px;
+  height: 70px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+  background-color: rgb(178, 178, 190);
+  color: rgb(29, 143, 90);
+}
