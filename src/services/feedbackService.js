@@ -1,28 +1,33 @@
 import Axios from 'axios'
-const API_URL = "https://6239be97bbe20c3f66c93c18.mockapi.io/api/v1/feedback"
+const MOCK_API_URL = "https://6239be97bbe20c3f66c93c18.mockapi.io/api"
 var axios = Axios.create({
     withCredentials: false
 })
 
-export const feedbackService = {
-    sendFeedback
+export function createFeedback(data) {
+    const request = {
+        url: `${MOCK_API_URL}/v1/feedback`,
+        method: 'POST',
+        data
+    };
+    return performRequest(request);
 }
 
-async function sendFeedback(endpoint,data,method) {
+export function updateFeedback(data, id) {
+    const request = {
+        url: `${MOCK_API_URL}/v1/feedback/${id}`,
+        method: 'PUT',
+        data
+    };
+    return performRequest(request);
+}
+
+async function performRequest(request) {
     try {
-        const res = await axios({
-            url: `${API_URL}${endpoint}`,
-            method,
-            data
-        })
-        res.data.msg = "Feedback sent! Thank you."
+        const res = await axios(request);
         return res.data;
     } catch (err) {
-        console.log(`Had Issues saving, with data: ${data}`)
-        console.dir(err)
-        if (err.response && err.response.status === 401) {
-            err.msg="Failed sending Feedback. try later"///if its ok - delete comment
-            throw err
-        }
+        console.log(`${err}`);
+        throw err;
     }
 }
