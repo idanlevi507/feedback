@@ -1,0 +1,105 @@
+.feedback-feature {
+  text-align: center;
+  font-family: titillium;
+  width: 98vw;
+  min-height:95vh ;
+}
+
+.question-p {
+  margin: 41px auto 17px;
+  font-weight: 600;
+}
+
+.yesno-container {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  font-size: 14px;
+}
+
+.yesno-img {
+  transform: translate(-5px, 20%);
+  cursor: pointer;
+}
+
+.additional-container {
+  display: none;
+  width: 184px;
+  margin: auto;
+}
+
+.textarea {
+  width: 184px;
+  height: 174px;
+  margin: 11px 0 3px 0;
+  background-color: #f4f4f4;
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+  resize: none;
+  font-family: inherit;
+}
+.textarea:read-only {
+  outline: none;
+}
+
+.buttons-div {
+  text-align: end;
+}
+.buttons-div>* {
+cursor: pointer;
+}
+
+.skip-button {
+  border: none;
+  background-color: white;
+}
+
+.submit-button {
+  background-color: #0069d9;
+  color: white;
+  width: 67px;
+  height: 32px;
+  font-size: 14px;
+  border: none;
+}
+
+.edit-button {
+  border: none;
+  height: 32px;
+  font-size: 14px;
+  background-color: #202020;
+  color: #f4f4f4;
+}
+
+.popup-msg {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 25px;
+  right: 46%;
+  margin-top: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 3px;
+  transition: 1s;
+  background-color: rgba(31, 168, 52, 0.801);
+  transition: all 1.5s ease-in-out;
+}
+
+/* Helpers */
+
+.opacity {
+  filter: opacity(0.2);
+}
+
+.show {
+  display: block;
+}
+
+@font-face {
+  font-family: titillium;
+  src: url(./fonts/TitilliumWeb-Regular.ttf);
+}

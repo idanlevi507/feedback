@@ -15,11 +15,13 @@ async function sendFeedback(endpoint,data,method) {
             method,
             data
         })
+        res.data.msg = "Feedback sent! Thank you."
         return res.data;
     } catch (err) {
-        console.log(`Had Issues , with data: ${data}`)
+        console.log(`Had Issues saving, with data: ${data}`)
         console.dir(err)
         if (err.response && err.response.status === 401) {
+            err.msg="Failed sending Feedback. try later"///if its ok - delete comment
             throw err
         }
     }
