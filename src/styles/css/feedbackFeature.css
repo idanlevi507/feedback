@@ -1,8 +1,6 @@
 .feedback-feature {
   text-align: center;
   font-family: titillium;
-  width: 98vw;
-  min-height:95vh ;
 }
 
 .question-p {
@@ -46,8 +44,8 @@
 .buttons-div {
   text-align: end;
 }
-.buttons-div>* {
-cursor: pointer;
+.buttons-div > * {
+  cursor: pointer;
 }
 
 .skip-button {
@@ -67,26 +65,10 @@ cursor: pointer;
 .edit-button {
   border: none;
   height: 32px;
-  font-size: 14px;
-  background-color: #202020;
-  color: #f4f4f4;
-}
-
-.popup-msg {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-  height: 25px;
-  right: 46%;
-  margin-top: 10px;
-  font-size: 11px;
-  font-weight: 600;
-  border-radius: 3px;
-  transition: 1s;
-  background-color: rgba(31, 168, 52, 0.801);
-  transition: all 1.5s ease-in-out;
+  font-size: 16px;
+  background-color: #f4f4f4;
+  color: #202020;
+  font-family: inherit;
 }
 
 /* Helpers */
